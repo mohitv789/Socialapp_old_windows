@@ -5,7 +5,7 @@ COPY ./default.conf.tpl /etc/nginx/default.conf.tpl
 COPY ./http_proxy.params /etc/nginx/http_proxy.params
 COPY ./ws_proxy.params /etc/nginx/ws_proxy.params
 COPY ./uwsgi_params /etc/nginx/uwsgi_params
-COPY ./run.sh /run.sh
+COPY ./run.sh /usr/local/bin/run.sh
 
 ENV LISTEN_PORT=8000
 ENV APP_HOST=backend_ea
@@ -13,14 +13,18 @@ ENV APP_PORT=9000
 
 USER root
 
-RUN mkdir -p /vol/static && \
-    chmod 755 /vol/static && \
-    touch /etc/nginx/conf.d/default.conf && \
-    chown nginx:nginx /etc/nginx/conf.d/default.conf && \
-    chmod +x /run.sh
+# ensure nginx can read/write the rendered conf
+RUN mkdir -p /vol/static \
+ && chmod 755 /vol/static \
+ && touch /etc/nginx/conf.d/default.conf \
+ && chown nginx:nginx /etc/nginx/conf.d/default.conf \
+ # fix Windows CRLF and make the script executable
+ && sed -i 's/\r$//' /usr/local/bin/run.sh \
+ && chmod +x /usr/local/bin/run.sh
 
 VOLUME /vol/static
 
 USER nginx
 
-CMD ["/run.sh"]
+# Call the script explicitly with sh to avoid shebang edge cases
+CMD ["sh", "-c", "/usr/local/bin/run.sh"]

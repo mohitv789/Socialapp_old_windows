@@ -1,7 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+You can add global styles to this file,
+and also import other style files html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow: auto;
+}
 
 .backdropBackground {
   filter: blur(5px);
@@ -27,7 +33,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 150px;
   }
 
-  .btn:hover, .btn:focus {
+  .btn:hover,
+  .btn:focus {
     -webkit-text-fill-color: black !important;
     border: 3px solid #0c527b !important;
     box-shadow: #0c2b57 1px 0 10px;
@@ -50,10 +57,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .imagerow > img {
     width: 250px;
     height: 250px;
-    overflow: hidden;
     background-color: #a0c9d5;
-    display:block;
-    margin:auto;
+    display: block;
+    margin: auto;
   }
   .custom-dialogbox {
     mat-dialog-container {
@@ -72,7 +78,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       width: 150px;
     }
 
-    .btn:hover, .btn:focus {
+    .btn:hover,
+    .btn:focus {
       -webkit-text-fill-color: black !important;
       border: 3px solid #0c527b !important;
       box-shadow: #0c2b57 1px 0 10px;
@@ -106,7 +113,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       width: 150px;
     }
 
-    .btn:hover, .btn:focus {
+    .btn:hover,
+    .btn:focus {
       -webkit-text-fill-color: black !important;
       border: 3px solid #0c527b !important;
       box-shadow: #0c2b57 1px 0 10px;

@@ -3,6 +3,9 @@
   padding: 20px auto;
   justify-content: center;
   max-width: 1000px;
+
+  overflow-y: auto;
+  height: 100vh;
 }
 
 .btn {
@@ -15,7 +18,8 @@
   color: black !important;
   max-width: fit-content;
 }
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   -webkit-text-fill-color: black !important;
   margin: 5px;
   border: 3px solid #0c527b !important;
@@ -37,11 +41,12 @@
   text-align: center;
 }
 
-.friends, .activities {
+.friends,
+.activities {
   padding: 10px 0px !important;
   margin: 10px auto !important;
   border-radius: 5px;
-  justify-content:center;
+  justify-content: center;
 }
 .friend-card {
   border-radius: 5px;
@@ -53,13 +58,15 @@
   padding: 10px;
 }
 
-.profile-body, .feed-container {
+.profile-body,
+.feed-container {
   margin: 10px auto;
   padding: 10px auto;
-  overflow: hidden;
 }
 
-.profile-body > .col-md-4,.profile-body > .col-md-2,.profile-body > .col-md-6 {
+.profile-body > .col-md-4,
+.profile-body > .col-md-2,
+.profile-body > .col-md-6 {
   margin: 10px auto;
   padding: 10px 0;
 }
@@ -68,8 +75,8 @@
   border-radius: 25px;
   overflow: hidden;
   background-color: #a0c9d5;
-  display:inline-block;
-  vertical-align:middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 .heading {
   margin-top: 8px !important;
@@ -92,5 +99,5 @@
   border-radius: 5px;
   padding: 10px auto !important;
   margin: 10px auto !important;
-  justify-content:center;
+  justify-content: center;
 }

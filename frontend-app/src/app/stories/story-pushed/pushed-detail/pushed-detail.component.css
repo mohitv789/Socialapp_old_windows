@@ -3,6 +3,9 @@
   padding: 20px auto;
   justify-content: center;
   width: 800px;
+
+  overflow-y: auto;
+  height: 100vh;
 }
 
 .btn {
@@ -15,7 +18,8 @@
   color: black !important;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   -webkit-text-fill-color: black !important;
   margin: 5px;
   border: 3px solid #0c527b !important;
@@ -34,8 +38,8 @@
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -43,8 +47,8 @@
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 .circular_image {
@@ -53,6 +57,6 @@
   border-radius: 50%;
   overflow: hidden;
   background-color: #a0c9d5;
-  display:inline-block;
-  vertical-align:middle;
+  display: inline-block;
+  vertical-align: middle;
 }
